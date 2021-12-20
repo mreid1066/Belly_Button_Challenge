@@ -3,7 +3,7 @@ function init() {
   var selector = d3.select("#selDataset");
 
   // Use the list of sample names to populate the select options
-  d3.json("samples.json").then((data) => {
+  d3.json("../samples.json").then((data) => {
     var sampleNames = data.names;
     console.log(data)
 
@@ -97,7 +97,7 @@ function buildCharts(sample) {
 
     // 9. Create the layout for the bar chart. 
     var barLayout = {
-      title: "<b>Top 10 Bacteria Culures Found</b>",
+      title: "<b>Top 10 Bacteria Cultures Found</b>",
       // xaxis: { title: "Sample Values"},
       yaxis: { 
         // title: "Top OTUs (ID)",
@@ -153,7 +153,7 @@ function buildCharts(sample) {
     // 3.5. Create the layout for the gauge chart.
     var gaugeLayout = { 
       title:  "<b>Belly Button Washing Frequency</b>" ,
-      width: 500,
+      width: 400,
       height: 400,
       margin: { t: 25, r: 25, l: 25, b: 25 },
     };
